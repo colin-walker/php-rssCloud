@@ -1,0 +1,35 @@
+CREATE TABLE `rssc_log` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `time` text NOT NULL,
+ `endpoint` text NOT NULL,
+ `feed` text NOT NULL,
+ `action` int(11) NOT NULL,
+ `status` int(11) NOT NULL,
+ PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4
+
+
+
+
+
+CREATE TABLE `rssc_ping` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `feed` text NOT NULL,
+ `time` char(20) NOT NULL,
+ `hash` char(32) NOT NULL,
+ PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4
+
+
+
+
+
+CREATE TABLE `rssc_sub` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `time` text NOT NULL,
+ `endpoint` text NOT NULL,
+ `port` int(11) NOT NULL,
+ `feed` text NOT NULL,
+ `failures` int(11) NOT NULL,
+ PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4

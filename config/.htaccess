@@ -1,0 +1,14 @@
+<Files config.php>
+Order Deny,Allow
+Deny from all
+</Files>
+
+# BEGIN Redirection
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+ErrorDocument 404 /404.php
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
+</IfModule>
+# END Redirection

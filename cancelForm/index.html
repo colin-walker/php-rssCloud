@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Cancel Form</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/cloud.png">
+</head>
+
+<body>
+	<header id="masthead" class="site-header">
+        <div class="site-branding">
+            <h1 class="site-title">
+                <a href="../" rel="home" title="home">
+                    <span class="p-name">Cancel Form</span>
+                </a>
+            </h1>
+        </div>
+    </header>
+        
+    <div class="wrapper mst">
+    	Posting to /cancel/ tells the server that you wish to stop receiving notifications when a feed is updated.
+	    <br><br><br>
+
+		<form method="post" action="../cancel/">
+			<input type="hidden" name="cancelForm" value="cancelForm">
+			<label for="domain">Domain</label>
+			<br>
+			<input type="text" class="form-control" name="domain" autocomplete="off" autofocus required>
+			<label for="path">Path</label>
+			<br>
+			<input type="text" class="form-control" name="path" autocomplete="off" required><label for="url">Feed URL</label>
+			<br>
+			<input type="text" class="form-control" name="url" autocomplete="off" required>
+			<input type="submit" name="submit" value="Please Cancel">
+			<div class="clear"></div>
+		</form>
+		<br><br>
+	</div>
+	
+</body>
+</html>

@@ -69,6 +69,8 @@ When you POST to **/ping/** the server checks if the feed has actually changed s
 
 /ping/ will return an XML request body with success="true" or "false" depending on whether the feed has changed since the last ping.
 
+If the server fails to notify any given subscriber it will increment the 'failures' column in the rssc_sub table. If it reaches 5 failures the subscription will be removed.
+
 ### POST /cancel/
 
 Posting to /cancel/ tells the server that you wish to stop receiving updates from the specified feed.
@@ -103,6 +105,3 @@ After manually filling out each of the forms you will be automatically routed to
 ## To do
 
 - clearing old events from the log, I need to determine a suitable retention period
-- options for auto-removal of subscriptions (not decided yet)
-    - after X notification failures, or
-    - when a feed hasn't update in a while

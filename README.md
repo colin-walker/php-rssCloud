@@ -10,7 +10,7 @@ I am considering situations where subscriptions might be auto-removed after X no
 ## Prerequisites
 
 - a MySQL database
-- an account to read/write from /to that database
+- an account to read/write from/to that database
     - it is preferable to have separate accounts for read & write
     
 ## Setup

@@ -104,6 +104,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 				        $time = time();
 			            $dbw = new DBW();
 			            $dbw->write("INSERT INTO rssc_log (time, endpoint, feed, action, status) VALUES ('$time', '$endpoint', '$url', 3, 0)");
+			            
+			            $dbr = readdb("SELECT failures FROM rssc_sub WHERE endpoint='$endpoint' AND feed='$url'");
+			            $count = (int)$dbr[0]['failures'];
+			            $count++;
+			            
+			            $dbw = new DBW();
+			            if ($count == 5) {			            
+				            $dbw->write("DELETE FROM rssc_sub WHERE endpoint='$endpoint' AND feed='$url'");
+			            } else {			            
+				            $dbw->write("UPDATE rssc_sub SET failures='$count' WHERE endpoint='$endpoint' AND feed='$url'");
+			            }
 				    } finally {
 				        curl_close($ch);
 				    }

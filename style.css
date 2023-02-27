@@ -111,6 +111,12 @@ pre {
 	font-size: 0.9em;
 }
 
+.cloud {
+    margin-right: 20px;
+    position: relative;
+    top: 8px;
+}
+
 
 /* Layout - header */
 

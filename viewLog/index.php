@@ -20,7 +20,7 @@ require_once('../config/config.php');
         <div class="site-branding">
             <h1 class="site-title">
                 <a href="../" rel="home" title="home">
-                    <span class="p-name">rssCloud log</span>
+                    <img class="cloud" src="../images/cloud.png"/><span class="p-name">rssCloud log</span>
                 </a>
             </h1>
         </div>

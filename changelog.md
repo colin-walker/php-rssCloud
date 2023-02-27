@@ -2,16 +2,21 @@
 
 **27th Feb 2023**
 
-Added logging for ayto-removal of subs due to 5 failures.
+Added logging for auto-removal of subs due to 5 failures.
 
-Made a new icon.
+Made a new icon and added to each page.
 
 Updated files:
 
 index.html
 style.css
+/cancelForm/index.html
+/docs/index.html
 /images/cloud.png
 /ping/index.php
+/pingForm/index.html
+/pleaseNotifyForm/index.html
+/viewLog/index.php
 
 **26th Feb 2023**
 

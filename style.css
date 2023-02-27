@@ -114,7 +114,7 @@ pre {
 .cloud {
     margin-right: 20px;
     position: relative;
-    top: 8px;
+    top: 9px;
 }
 
 
@@ -317,6 +317,10 @@ td a {
 	
 	#tip {
 		max-width: 85%;
+	}
+	
+	.cloud {
+		top: 10px;	
 	}
 }
 

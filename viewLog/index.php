@@ -63,6 +63,7 @@ foreach ($logs as $event) {
 		2: duplicate
 		3: update
 		4: no change
+		5: remove
 	*/
 	
 	// cancel
@@ -102,6 +103,11 @@ foreach ($logs as $event) {
 			case "3":
 				echo '<td>SUBSCRIBE</td>';
 				echo '<td>'.$host.' refreshed their subscription to a <a href="'.$feed.'">feed</a></td>';
+				echo '<td>'.$time.'</td>';
+				break;
+			case "5":
+				echo '<td>SUBSCRIBE</td>';
+				echo '<td>'.$host.' subscription to a <a href="'.$feed.'">feed</a> removed due to failures</td>';
 				echo '<td>'.$time.'</td>';
 				break;
 		}

@@ -20,7 +20,7 @@ class DBR {
 	}
 	
 	public function read($query) {
-	    if ($result = $this->handle->query($query)) {
+	    if ($result = $this->handle->prepare($query)) {
 			$result = $this->handle->query($query)->fetch_all(MYSQLI_ASSOC);
 		} else {
 			$result = [];

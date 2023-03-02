@@ -12,7 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$path = $_POST["path"];
 		$registerProcedure = $_POST["registerProcedure"];
 		$protocol = $_POST["protocol"];
-		$url = $_POST["url"];
+		if (isset($_POST['url'])) {
+		    $url = $_POST['url'];
+		} else if (isset($_POST['url1'])) {
+		    $url = $_POST['url1'];
+		}
 	} catch (exception $e) {
 	}
 	

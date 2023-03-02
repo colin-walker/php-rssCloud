@@ -1,5 +1,13 @@
 # php-rssCloud changelog
 
+**2nd March 2023**
+
+Adjust url parameter check. More to come.
+
+Updated files:
+
+- .pleaseNotify/index.php
+
 **27th Feb 2023**
 
 Added logging for auto-removal of subs due to 5 failures.
